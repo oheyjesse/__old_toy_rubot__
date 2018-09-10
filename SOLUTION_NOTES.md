@@ -10,11 +10,11 @@ Solution Overview
 Dev Diary
 ---------
 
-### - Thurs 2nd Aug: 1 hour
+### - Thurs 2nd Aug
 
 I didn't have a lot of time here, but I got the problem copied into an overview, structured my README and set up the Gemfile. Plan to spend the next little bit of time working out my design plan.
 
-### - Fri 3rd Aug: 1/2 hour
+### - Fri 3rd Aug
 
 Started out by creating this Dev Diary to note down progress notes. Next up will be to brainstorm the problem and go about implementing a high level solution so I might TDD it.
 
@@ -23,7 +23,7 @@ Started out by creating this Dev Diary to note down progress notes. Next up will
 
 From this I can see a few options for classes:
 
->**Robot**: Could be a main class to create an instance of a `Robot`. This robot could keep track of it's *POSITION* on the table, it's *FACING* direction, and perhaps some other features such as it's *NAME*. It could have methods to *TURN* itself, *MOVE* itself, and *DETECT* the edge to *PREVENT* itself from falling off. These could be sent as messages from a **COMMANDS** module that takes and parses input
+>**Robot**: Could be a main class to create an instance of a `Robot`. This robot could keep track of it's *POSITION* on the table, it's *FACING* direction, and perhaps some other features such as it's *NAME*. It could have methods to *TURN* itself, *MOVE* itself, and *DETECT* the edge to *PREVENT* itself from falling off. It can *REPORT* it's position and facing, too. These could be sent as messages from a **COMMANDS** module that takes and parses input
 >
 >**Table**: Will be a simple class, barely a class at all, with which to store the world size. This could just be hard-coded into the robot... but it doesn't feel like the right place to put it. The robot should have to query the table for it's size.
 >
@@ -39,3 +39,6 @@ From this I can see a few options for classes:
 >**ToyRobot**: Main class - This will likely just run the main program loop, store the `Robot` itself, and the `Table`. It will have a few methods, most likely, for passing commands to the robot and table.
 
 This is just a rough plan, I'll try to TDD it from here with this all in mind. I'll start with the `Robot` class.
+
+### - Mon, 5th Sept
+
