@@ -1,3 +1,16 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Dev Diary](#dev-diary)
+  - [- Thurs 2nd Aug](#--thurs-2nd-aug)
+  - [- Fri 3rd Aug](#--fri-3rd-aug)
+    - [Design Sketchpad](#design-sketchpad)
+  - [- Mon, 10th Sept](#--mon-10th-sept)
+  - [- Tue 11th Sept](#--tue-11th-sept)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 Dev Diary
 ---------
 

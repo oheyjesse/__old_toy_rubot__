@@ -1,4 +1,23 @@
- 🤖 '**Toy Robot**' 🤖 - A classic Ruby Code Challenge solution by *<a href="http://www.github.com/oheydrew">@oheydrew</a>*
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [💎🤖 '***Toy Rubot***' 🤖💎 - A classic Code Challenge solution in Ruby by *<a href="http://www.github.com/oheydrew">@oheydrew</a>*](#-toy-rubot----a-classic-code-challenge-solution-in-ruby-by-a-hrefhttpwwwgithubcomoheydrewoheydrewa)
+  - [Documentation](#documentation)
+  - [Overview](#overview)
+    - [Things I plan to use / learn](#things-i-plan-to-use--learn)
+  - [The Brief](#the-brief)
+  - [Getting Started](#getting-started)
+  - [Installation](#installation)
+  - [Running Tests](#running-tests)
+    - [Standard RSpec tests](#standard-rspec-tests)
+    - [Guard-RSpec for auto-running tests](#guard-rspec-for-auto-running-tests)
+  - [Author](#author)
+  - [Acknowledgements](#acknowledgements)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+💎🤖 '***Toy Rubot***' 🤖💎 - A classic Code Challenge solution in Ruby by *<a href="http://www.github.com/oheydrew">@oheydrew</a>*
 ===================
 
 Documentation
