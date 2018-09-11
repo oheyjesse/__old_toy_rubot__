@@ -10,8 +10,17 @@ This is my attempt at the "Toy Robot" coding challenge. I'm doing this in Ruby a
 
 - Ruby Enumerable methods
 - OOP Design Principles (taken mostly from Sandi Metz's amazing <a href="http://www.poodr.com/">POODR</a> guide)
-- Design Driven, then Test Driven Development
+- Domain Driven Design, then Test Driven Development
 - Smarter testing practices (again, taken from Sandi Metz's <a href="http://jnoconor.github.io/images/unit-testing-chart-sandi-metz.png">The Testing Minimalist</a> talk)
+
+The Brief
+---------
+
+In short, the challenge is to write a command-line program that takes a number of user inputs, to direct a small toy robot on top of a table 5x5 units wide. The user must be able to PLACE the robot at the starting position, command the robot to turn LEFT, RIGHT or MOVE forward, and REPORT on it's location. 
+
+If the robot is at the edge of the 5x5 table, it must not exceed it (it must not be allowed to fall off).
+
+The full brief was found online and can be found at <a href="./docs/PROBLEM.md">PROBLEM.md</a>. I will be sticking firmly to this brief in terms of INPUT and REPORTing from the robot- Though I may add a feature to give the robot some personality. :)
 
 Getting Started
 ---------------
@@ -23,14 +32,26 @@ Installation
 
 > *TODO: Insert instructions here!*
 
-The Brief
----------
+Running Tests
+-------------
 
-In short, the challenge is to write a command-line program that takes a number of user inputs, to direct a small toy robot on top of a table 5x5 units wide. The user must be able to PLACE the robot at the starting position, command the robot to turn LEFT, RIGHT or MOVE forward, and REPORT on it's location. 
+### Standard RSpec tests
 
-If the robot is at the edge of the 5x5 table, it must not exceed it (it must not be allowed to fall off).
+To run the full test suite navigate to the project root (eg: `~/toy_robot/`) and run:
 
-The full brief was found online and can be found at <a href="./PROBLEM.md">PROBLEM.md</a>. I will be sticking firmly to this brief in terms of INPUT and REPORTing from the robot- Though I may add a feature to give the robot some personality. :)
+```
+~/toy_robot/ $ rspec
+```
+
+### Guard-RSpec for auto-running tests
+
+This project has [guard](https://github.com/guard/guard#readme) insatalled with the `guard-rails` plugin. This can automate your tests, watching in the background for any changes. To run tests in this way, run:
+
+```
+~/toy_robot/ $ bundle exec guard
+```
+
+This will run `guard`, and watch for changes.
 
 Author
 ------

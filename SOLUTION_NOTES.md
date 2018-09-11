@@ -6,39 +6,59 @@ Solution Overview
 
 *TODO: Overview of how I tackle this*
 
+Class Breakdown
+---------------
+### **Nouns to consider**: 
+>*ROBOT*, *POSITION*, *TABLE*, *COMMANDS*, *PLACE*, *MOVE*, *TURN*, *FACING*, *LEFT*, *RIGHT*, *REPORT*, *PREVENT*
 
-Dev Diary
----------
+### **ToyRobot (Module)**: 
+>This will likely just run the main program loop. 
 
-### - Thurs 2nd Aug
+### **Game**:
+>Main game logic class. Stores the `Robot` and the `Table` instances. Central point for message routing.
 
-I didn't have a lot of time here, but I got the problem copied into an overview, structured my README and set up the Gemfile. Plan to spend the next little bit of time working out my design plan.
-
-### - Fri 3rd Aug
-
-Started out by creating this Dev Diary to note down progress notes. Next up will be to brainstorm the problem and go about implementing a high level solution so I might TDD it.
-
-#### Design Sketchpad
->Nouns to consider: *ROBOT*, *POSITION*, *TABLE*, *COMMANDS*, *PLACE*, *MOVE*, *TURN*, *FACING*, *LEFT*, *RIGHT*, *REPORT*, *PREVENT*
-
-From this I can see a few options for classes:
-
->**Robot**: Could be a main class to create an instance of a `Robot`. This robot could keep track of it's *POSITION* on the table, it's *FACING* direction, and perhaps some other features such as it's *NAME*. It could have methods to *TURN* itself, *MOVE* itself, and *DETECT* the edge to *PREVENT* itself from falling off. It can *REPORT* it's position and facing, too. These could be sent as messages from a **COMMANDS** module that takes and parses input
+### **Robot**: 
+>The robot is our main feature. It tracks it's own position, yet does not know anything about the world it is in. It knows how to move itself around, and that's it. It relies on other classes with more access to the `table` to decide on valid moves.
 >
->**Table**: Will be a simple class, barely a class at all, with which to store the world size. This could just be hard-coded into the robot... but it doesn't feel like the right place to put it. The robot should have to query the table for it's size.
+>`class Robot`: Creates an instance of a `Robot`.
+> - **@position** (*hash*) 
+>   - x_pos (*integer*)
+>   - y_pos (*integer*)
+>   - facing (*symbol ie :north, :south*)
+> - **@name** (*string - default 'Ruby'*) 
 >
->**Commands**: (class << self ?) This class will parse commands from the user input, and pass them back as symbols (to be passed as messages to the robot)
-> - *PARSE*:
->   - *PLACE (X,Y,Facing)* - Parses PLACE command and return (:parse, args)
->   - *LEFT/RIGHT* - Parse left/right and return :turn(left/right)
->   - *MOVE* - Parse move return send :move
->   - *REPORT* - Parse report return send :report
->
->**Output**: (class << self ?) - Possibly just here to handle output to the user, enable prettifying it a bit easier, keep it consistent, etc.
->
->**ToyRobot**: Main class - This will likely just run the main program loop, store the `Robot` itself, and the `Table`. It will have a few methods, most likely, for passing commands to the robot and table.
+>Public methods: `move`, `turn`
 
-This is just a rough plan, I'll try to TDD it from here with this all in mind. I'll start with the `Robot` class.
+### **Table**: 
+>Basically a storage class, that has a method which can determine if cooordinates are in bounds or not. This can be used for placing and checking valid moves.
+>
+>`class Table`: Creates an instance of a `Table`.
+> - **@size** (*hash*) 
+>   - x (*integer - default 5*)
+>   - y (*integer - default 5*)
+>
+>Public methods: `in_bounds?`
 
-### - Mon, 5th Sept
+### **Command**:
+>Parses commands from the user input, and returns them back as symbols (to be passed as messages to the `Robot` and `Table`)
+>
+>`class Command` (`class << self`): Class methods only (No instances)
+>
+>Public methods:
+> - `parse`:
+>   - *PLACE (x,y,facing)* - Parses PLACE command and return (:parse, args)
+>   - *LEFT/RIGHT* - Parse left/right and return (:turn, args)
+>   - *MOVE* - Parse move return :move
+>   - *REPORT* - Parse report return :report
+
+### **Display**:
+>Handles output to the user. Prettifies it. 
+>
+>`class Display` (`class << self`): Class methods only (No instances)
+>
+>Public methods:
+> - `output` (*message*, *style(optional)*)
+> - `report` (*position*)
+> - `intro`
+> - `dev_info` (reports position info etc after each move)
 
