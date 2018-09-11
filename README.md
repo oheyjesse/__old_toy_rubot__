@@ -1,24 +1,23 @@
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
-
-- [💎🤖 '***Toy Rubot***' 🤖💎 - A classic Code Challenge solution in Ruby by *<a href="http://www.github.com/oheydrew">@oheydrew</a>*](#-toy-rubot----a-classic-code-challenge-solution-in-ruby-by-a-hrefhttpwwwgithubcomoheydrewoheydrewa)
-  - [Documentation](#documentation)
-  - [Overview](#overview)
-    - [Things I plan to use / learn](#things-i-plan-to-use--learn)
-  - [The Brief](#the-brief)
-  - [Getting Started](#getting-started)
-  - [Installation](#installation)
-  - [Running Tests](#running-tests)
-    - [Standard RSpec tests](#standard-rspec-tests)
-    - [Guard-RSpec for auto-running tests](#guard-rspec-for-auto-running-tests)
-  - [Author](#author)
-  - [Acknowledgements](#acknowledgements)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
 💎🤖 '***Toy Rubot***' 🤖💎 - A classic Code Challenge solution in Ruby by *<a href="http://www.github.com/oheydrew">@oheydrew</a>*
 ===================
+
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+## Table of Contents
+
+- [Documentation](#documentation)
+- [Overview](#overview)
+  - [Coding Principles](#coding-principles)
+- [The Brief](#the-brief)
+- [Getting Started](#getting-started)
+- [Installation](#installation)
+- [Running Tests](#running-tests)
+  - [Standard RSpec tests](#standard-rspec-tests)
+  - [Guard-RSpec for auto-running tests](#guard-rspec-for-auto-running-tests)
+- [Author](#author)
+- [Acknowledgements](#acknowledgements)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 Documentation
 -------------
@@ -31,12 +30,12 @@ Overview
 
 This is my attempt at the "Toy Robot" coding challenge. I'm doing this in Ruby as the first project after my Coder Academy bootcamp course, as a way to check my learning and see what I can make happen.
 
-### Things I plan to use / learn
+### Coding Principles
 
-- Ruby Enumerable methods
+- Test Driven Development
 - OOP Design Principles (taken mostly from Sandi Metz's amazing <a href="http://www.poodr.com/">POODR</a> guide)
-- Domain Driven Design, then Test Driven Development
 - Smarter testing practices (again, taken from Sandi Metz's <a href="http://jnoconor.github.io/images/unit-testing-chart-sandi-metz.png">The Testing Minimalist</a> talk)
+- Ruby Enumerable methods
 
 The Brief
 ---------
@@ -88,3 +87,5 @@ Acknowledgements
 
 - <a href="https://github.com/radar">Ryan Bigg</a> at Culture Amp for encouraging me to do this challenge and his mentorship
 - David Christ at REA Group for the initial <a href="https://github.com/dctr/rea-robot">PROBLEM.md</a>
+- [Cameo Langford](http://www.github.com/cameocodes) for all the code reviews and back-and-forth
+- [Sandi Metz](http://www.poodr.com) - For her amazing book, **Practical Object Oriented Design in Ruby**, which I can't reccomend enough for any programmer interested in gaining an understanding of Object Oriented Design, even if you don't write ruby! 😅

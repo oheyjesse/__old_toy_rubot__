@@ -1,28 +1,26 @@
+Dev Diary
+---------
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+## Table of Contents
 
-- [Dev Diary](#dev-diary)
-  - [- Thurs 2nd Aug](#--thurs-2nd-aug)
-  - [- Fri 3rd Aug](#--fri-3rd-aug)
-    - [Design Sketchpad](#design-sketchpad)
-  - [- Mon, 10th Sept](#--mon-10th-sept)
-  - [- Tue 11th Sept](#--tue-11th-sept)
+- [Thurs 2nd Aug](#thurs-2nd-aug)
+- [Fri 3rd Aug](#fri-3rd-aug)
+  - [Design Sketchpad](#design-sketchpad)
+- [Mon, 10th Sept](#mon-10th-sept)
+- [Tue 11th Sept](#tue-11th-sept)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-Dev Diary
----------
-
-### - Thurs 2nd Aug
+## Thurs 2nd Aug
 
 I didn't have a lot of time here, but I got the problem copied into an overview, structured my README and set up the Gemfile. Plan to spend the next little bit of time working out my design plan.
 
-### - Fri 3rd Aug
+## Fri 3rd Aug
 
 Started out by creating this Dev Diary to note down progress notes. Next up will be to brainstorm the problem and go about implementing a high level solution so I might TDD it.
 
-#### Design Sketchpad
+### Design Sketchpad
 >Nouns to consider: *ROBOT*, *POSITION*, *TABLE*, *COMMANDS*, *PLACE*, *MOVE*, *TURN*, *FACING*, *LEFT*, *RIGHT*, *REPORT*, *PREVENT*
 
 From this I can see a few options for classes:
@@ -44,13 +42,13 @@ From this I can see a few options for classes:
 
 This is just a rough plan, I'll try to TDD it from here with this all in mind. I'll start with the `Robot` class.
 
-### - Mon, 10th Sept
+## Mon, 10th Sept
 
 Had to take a bit of a break from this for a month whilst I did my internship and PyConAU. But I'm back, and into it.
 
 Got into it today - TDD'd my way through most of the `Robot` class. `position` and `move` were easy enough. `turn` was more open to interpretation. I initially started just using numbers (+1 and -1) to turn left or right, but I decided eventually to use symbols `:left` and `:right`. Implemented a `compass` variable to hold the `:north, :east, :south, :west` directions. Adding 1 or -1 to the array would return the result.
 
-### - Tue 11th Sept
+## Tue 11th Sept
 
 Realised a problem when iterating through `compass` - eventually it'd fall out of range if +1 went over compass.length. Used `rotate()` to fix the issue, though it took a few goes. Tests added for turning through the whole range and back again (doing *sick* 360 burnouts?)
 

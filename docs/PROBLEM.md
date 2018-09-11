@@ -1,20 +1,19 @@
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
-
-- [Toy Robot Simulator](#toy-robot-simulator)
-  - [Description](#description)
-  - [Constraints](#constraints)
-  - [Example Input and Output](#example-input-and-output)
-    - [Example a](#example-a)
-    - [Example b](#example-b)
-    - [Example c](#example-c)
-  - [Deliverables](#deliverables)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
 Toy Robot Simulator
 ===================
+
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+## Table of Contents
+
+- [Description](#description)
+- [Constraints](#constraints)
+- [Example Input and Output](#example-input-and-output)
+  - [Example a](#example-a)
+  - [Example b](#example-b)
+  - [Example c](#example-c)
+- [Deliverables](#deliverables)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 Description
 -----------

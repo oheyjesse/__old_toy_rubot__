@@ -1,22 +1,21 @@
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
-
-- [Solution Notes](#solution-notes)
-  - [Solution Overview](#solution-overview)
-  - [Class Breakdown](#class-breakdown)
-    - [**Nouns to consider**:](#nouns-to-consider)
-    - [**ToyRobot (Module)**:](#toyrobot-module)
-    - [**Game**:](#game)
-    - [**Robot**:](#robot)
-    - [**Table**:](#table)
-    - [**Command**:](#command)
-    - [**Display**:](#display)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
 Solution Notes
 ==============
+
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+## Table of Contents
+
+- [Solution Overview](#solution-overview)
+- [Class Breakdown](#class-breakdown)
+  - [**Nouns to consider**:](#nouns-to-consider)
+  - [**ToyRobot (Module)**:](#toyrobot-module)
+  - [**Game**:](#game)
+  - [**Robot**:](#robot)
+  - [**Table**:](#table)
+  - [**Command**:](#command)
+  - [**Display**:](#display)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 Solution Overview
 -----------------
