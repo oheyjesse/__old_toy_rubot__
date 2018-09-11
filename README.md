@@ -1,6 +1,9 @@
 💎🤖 '***Toy Rubot***' 🤖💎 - A classic Code Challenge solution in Ruby by *<a href="http://www.github.com/oheydrew">@oheydrew</a>*
 ===================
 
+## September 2018 Update: Still very much a WIP.
+*It's not functional, yet - check out the [dev diary](./docs/DEV_DIARY.md) for updates :)*
+
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 ## Table of Contents
