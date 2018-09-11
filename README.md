@@ -1,6 +1,12 @@
  🤖 '**Toy Robot**' 🤖 - A classic Ruby Code Challenge solution by *<a href="http://www.github.com/oheydrew">@oheydrew</a>*
 ===================
 
+Documentation
+-------------
+- **[PROBLEM.md](./docs/PROBLEM.md)** : The supplied problem outline in full
+- **[SOLUTION_OHEYDREW.md](./docs/SOLUTION_OHEYDREW.md)** : Outline of my solution, class breakdown & general mechanics
+- **[DEV_DIARY.md](./docs/DEV_DIARY.md)** : Longer form day-by-day dev diary
+
 Overview
 --------
 
@@ -20,7 +26,7 @@ In short, the challenge is to write a command-line program that takes a number o
 
 If the robot is at the edge of the 5x5 table, it must not exceed it (it must not be allowed to fall off).
 
-The full brief was found online and can be found at <a href="./docs/PROBLEM.md">PROBLEM.md</a>. I will be sticking firmly to this brief in terms of INPUT and REPORTing from the robot- Though I may add a feature to give the robot some personality. :)
+The full brief was found online and can be found at [PROBLEM.md](./docs/PROBLEM.md). I will be sticking firmly to this brief in terms of INPUT and REPORTing from the robot- Though I may add a feature to give the robot some personality. :)
 
 Getting Started
 ---------------
