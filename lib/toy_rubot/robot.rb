@@ -1,5 +1,3 @@
-require 'pry'
-
 module ToyRubot
   class Robot
     attr_reader :position
@@ -40,7 +38,5 @@ module ToyRubot
 
       @position
     end
-
-
   end
 end
