@@ -6,3 +6,12 @@ Style/SymbolArray:
 
 Style/Documentation:
   Enabled: false
+
+Style/IfUnlessModifier:
+  Enabled: false
+
+Style/RedundantParentheses:
+  Enabled: false
+
+Naming/AccessorMethodName:
+  Enabled: false
