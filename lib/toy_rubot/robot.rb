@@ -1,23 +1,23 @@
 module ToyRubot
   class Robot
-    attr_reader :position
+    attr_reader :position, :facing
     attr_accessor :name
 
-    def initialize(x, y, facing, name='Ruby')
+    def initialize(name: 'Ruby', **args)
       @name = name
       @position = {
-        x_pos: x,
-        y_pos: y,
-        facing: facing
+        x: args[:x],
+        y: args[:y]
       }
+      @facing = args[:facing]
     end
 
     def move
-      case @position[:facing]
-      when :north then @position[:y_pos] += 1
-      when :east then @position[:x_pos] += 1
-      when :south then @position[:y_pos] -= 1
-      when :west then @position[:x_pos] -= 1
+      case @facing
+      when :north then @position[:y] += 1
+      when :east then @position[:x] += 1
+      when :south then @position[:y] -= 1
+      when :west then @position[:x] -= 1
       end
 
       @position
@@ -29,14 +29,14 @@ module ToyRubot
       end
 
       compass = [:north, :east, :south, :west]
-      facing_index = compass.index(@position[:facing])
+      facing_index = compass.index(@facing)
 
       case direction
-      when :left then @position[:facing] = compass.rotate(1)[facing_index]
-      when :right then @position[:facing] = compass.rotate(-1)[facing_index]
+      when :left then @facing = compass.rotate(1)[facing_index]
+      when :right then @facing = compass.rotate(-1)[facing_index]
       end
 
-      @position
+      @facing
     end
   end
 end

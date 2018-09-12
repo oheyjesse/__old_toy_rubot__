@@ -1,5 +1,5 @@
 RSpec.describe ToyRubot::Robot do
-  let(:robot) { ToyRubot::Robot.new(0, 0, :north) }
+  let(:robot) { ToyRubot::Robot.new(x: 0, y: 0, facing: :north) }
 
   describe 'init' do
     it 'can instantiate an instance of Robot' do
@@ -9,7 +9,7 @@ RSpec.describe ToyRubot::Robot do
 
   describe 'name' do
     it 'has a default name if none supplied' do
-      robot = ToyRubot::Robot.new(0, 0, :north)
+      robot = ToyRubot::Robot.new(x: 0, y: 0, facing: :north)
       expect(robot.name).to eq('Ruby')
     end
 
@@ -21,30 +21,31 @@ RSpec.describe ToyRubot::Robot do
 
   describe 'position / move' do
     it 'can return it\'s position' do
-      expect(robot.position).to eq(x_pos: 0, y_pos: 0, facing: :north)
+      expect(robot.position).to eq(x: 0, y: 0)
     end
 
     it 'can move forward' do
       robot.move
-      expect(robot.position[:facing]).to eq(:north)
+      expect(robot.position).to eq(x: 0, y: 1)
+      expect(robot.facing).to eq(:north)
     end
   end
 
   describe 'turning' do
     it 'can turn left' do
       robot.turn(:left)
-      expect(robot.position[:facing]).to eq(:east)
+      expect(robot.facing).to eq(:east)
     end
 
     it 'can turn right' do
       robot.turn(:right)
-      expect(robot.position[:facing]).to eq(:west)
+      expect(robot.facing).to eq(:west)
     end
 
     it 'can turn to the left 180 degrees' do
       robot.turn(:left)
       robot.turn(:left)
-      expect(robot.position[:facing]).to eq(:south)
+      expect(robot.facing).to eq(:south)
     end
 
     it 'can turn to the right a full 360 degrees' do
@@ -52,7 +53,7 @@ RSpec.describe ToyRubot::Robot do
       robot.turn(:right)
       robot.turn(:right)
       robot.turn(:right)
-      expect(robot.position[:facing]).to eq(:north)
+      expect(robot.facing).to eq(:north)
     end
   end
 end

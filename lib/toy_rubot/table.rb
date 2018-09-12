@@ -1,15 +1,33 @@
 module ToyRubot
   class Table
-    def initialize(x = 4, y = 4)
-      @x = x
-      @y = y
+    attr_reader :size
+
+    def initialize(x: 4, y: 4)
+      @size = {
+        x: x,
+        y: y
+      }
     end
 
-    def size
-      [@x, @y]
+    def set_size(**size)
+      new_size = {
+        x: size[:x],
+        y: size[:y]
+      }
+
+      @size = new_size if input_checked?(new_size)
     end
 
-    def set_size(x, y)
+    def in_bounds?(position)
+      x_in_bounds = position[:x] >= 0 && position[:x] <= @size[:x]
+      y_in_bounds = position[:y] >= 0 && position[:y] <= @size[:y]
+
+      x_in_bounds && y_in_bounds
+    end
+
+    private def input_checked?(size)
+      x, y = size.values_at(:x, :y)
+
       unless x.is_a?(Integer) && y.is_a?(Integer)
         raise ArgumentError, 'size must be an integer'
       end
@@ -18,15 +36,7 @@ module ToyRubot
         raise ArgumentError, 'size must be greater than 1'
       end
 
-      @x = x
-      @y = y
-      [@x, @y]
-    end
-
-    def in_bounds?(x, y)
-      return true if x >= 0 && x <= @x
-      return true if y >= 0 && y <= @y
-      false
+      true
     end
   end
 end
