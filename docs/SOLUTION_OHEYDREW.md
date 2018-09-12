@@ -49,9 +49,8 @@ Class Breakdown
 >Basically a storage class, that has a method which can determine if cooordinates are in bounds or not. This can be used for placing and checking valid moves.
 >
 >`class Table`: Creates an instance of a `Table`.
-> - **@size** (*hash*) 
->   - x (*integer - default 5*)
->   - y (*integer - default 5*)
+> - x (*integer - default 5*)
+> - y (*integer - default 5*)
 >
 >Public methods: `in_bounds?`
 

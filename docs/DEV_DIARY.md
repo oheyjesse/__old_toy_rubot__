@@ -53,3 +53,9 @@ Got into it today - TDD'd my way through most of the `Robot` class. `position` a
 Realised a problem when iterating through `compass` - eventually it'd fall out of range if +1 went over compass.length. Used `rotate()` to fix the issue, though it took a few goes. Tests added for turning through the whole range and back again (doing *sick* 360 burnouts?)
 
 Decided against having the robot `detect` the edge. I'd need to pass it the `table`. Instead, I'm leaning toward adding a `game` class, to hold the `table`, `robot` and run logic like this.
+
+## Wed 12th Sept
+
+Refactoring today. Decided to move away from using individual arguments for setting x, y positions and sizes, first into an array, and then, decided to use `**args` to my advantage and get *really rather ruby* and do everything with hashes and symbols. It works, and it's kinda neat, but it's also a bit rails-y and I'm not sure how I feel about it 😂
+
+I'll keep going with it. Whilst some would say the decision to use `:symbols` and pass arguments as `:hashes` everywhere is unreadable to the non-ruby types... Well, I'd agree. But I'm writing a solution to a problem in *ruby*, so I'll go with some ruby convention. Plus, it doesn't hurt for me to understand the syntax better.
