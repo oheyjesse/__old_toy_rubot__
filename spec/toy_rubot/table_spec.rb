@@ -1,8 +1,10 @@
 RSpec.describe ToyRubot::Table do
   let(:table) { ToyRubot::Table.new }
 
-  it 'can instantiate an instance of Table' do
-    expect(table).to be_an_instance_of(ToyRubot::Table)
+  describe 'init' do
+    it 'can instantiate an instance of Table' do
+      expect(table).to be_an_instance_of(ToyRubot::Table)
+    end
   end
 
   describe '.set_size' do
