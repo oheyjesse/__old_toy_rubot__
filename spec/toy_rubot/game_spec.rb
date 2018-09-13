@@ -64,4 +64,12 @@ RSpec.describe ToyRubot::Game do
         .to raise_error(RuntimeError)
     end
   end
+
+  describe 'robot movement' do
+    game.create_table
+
+    it 'can check if the intended direction is valid' do
+      expect(game.check_valid(x: 3, y: 3)).to be(true)
+    end
+  end
 end
