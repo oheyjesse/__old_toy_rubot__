@@ -66,22 +66,36 @@ RSpec.describe ToyRubot::Game do
   end
 
   describe 'check_valid' do
-    game.create_table
-
     it 'returns true if coordinates in range' do
+      game.create_table
       expect(game.check_valid(x: 3, y: 3)).to be(true)
     end
 
     it 'returns false if coordinates out of range' do
+      game.create_table
       expect(game.check_valid(x: 15, y: 15)).to be(false)
     end
 
     it 'returns false if x coordinate out of range' do
+      game.create_table
       expect(game.check_valid(x: 15, y: 3)).to be(false)
     end
 
     it 'returns false if y coordinate out of range' do
+      game.create_table
       expect(game.check_valid(x: 3, y: 15)).to be(false)
+    end
+
+    it 'can get and pass the next robot move if valid' do
+      game.create_table
+      game.create_robot(x: 2, y: 2, facing: :north)
+      expect(game.check_valid(game.robot.next_move)).to be(true)
+    end
+
+    it 'can get and pass the next robot move if valid' do
+      game.create_table
+      game.create_robot(x: 4, y: 4, facing: :north)
+      expect(game.check_valid(game.robot.next_move)).to be(false)
     end
   end
 end

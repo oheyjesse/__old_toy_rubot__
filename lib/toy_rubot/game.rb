@@ -29,5 +29,9 @@ module ToyRubot
     def update_robot_name(name)
       @robot.name = name
     end
+
+    def check_valid(x:, y:)
+      @table.in_bounds?(x: x, y: y)
+    end
   end
 end
