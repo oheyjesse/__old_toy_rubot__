@@ -3,13 +3,13 @@ module ToyRubot
     attr_reader :position, :facing
     attr_accessor :name
 
-    def initialize(name: 'Ruby', **args)
+    def initialize(x:, y:, facing:, name: 'Ruby')
       @name = name
       @position = {
-        x: args[:x],
-        y: args[:y]
+        x: x,
+        y: y
       }
-      @facing = args[:facing]
+      @facing = facing
     end
 
     def move
