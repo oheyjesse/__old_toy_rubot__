@@ -32,6 +32,7 @@ Class Breakdown
 
 ### **Game**:
 >Main game logic class. Stores the `Robot` and the `Table` instances. Central point for message routing. Will need to `check_valid` for moves and robot placement, which will involve getting coordinates (either from the robot's next move, or from the parsed input), then moving or placing if the placement is valid.
+>Public methods: `create_table`, `create_robot`, `check_valid`
 
 ### **Robot**: 
 >The robot is our main feature. It tracks it's own position, yet does not know anything about the world it is in. It knows how to move itself around, and that's it. It relies on other classes with more access to the `table` to decide on valid moves.
@@ -43,7 +44,7 @@ Class Breakdown
 >   - facing (*symbol ie :north, :south*)
 > - **@name** (*string - default 'Ruby'*) 
 >
->Public methods: `move`, `turn`
+>Public methods: `move`, `next_position`, `turn`
 
 ### **Table**: 
 >Basically a storage class, that has a method which can determine if cooordinates are in bounds or not. This can be used for placing and checking valid moves.

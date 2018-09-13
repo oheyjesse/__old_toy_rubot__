@@ -59,3 +59,9 @@ Decided against having the robot `detect` the edge. I'd need to pass it the `tab
 Refactoring today. Decided to move away from using individual arguments for setting x, y positions and sizes, first into an array, and then, decided to use `**args` to my advantage and get *really rather ruby* and do everything with hashes and symbols. It works, and it's kinda neat, but it's also a bit rails-y and I'm not sure how I feel about it 😂
 
 I'll keep going with it. Whilst some would say the decision to use `:symbols` and pass arguments as `:hashes` everywhere is unreadable to the non-ruby types... Well, I'd agree. But I'm writing a solution to a problem in *ruby*, so I'll go with some ruby convention. Plus, it doesn't hurt for me to understand the syntax better.
+
+## Thurs 13th Sept
+
+Moved on from individual `robot` and `table` methods into `game` methods. Made the main logic method `check_valid`, which will grab the robot's `next_position` (had to go make that one) and check if it's good.
+
+Learned a *lot* about `**args`, as well as `keyword_arguments` in ruby today, and it's all *really freaking sweet*. I am really enjoying writing in this way, making the code clear and readable. It seems like a pretty nice way to self-document (as long as I make sure I clarify what `**args` are where possible).
