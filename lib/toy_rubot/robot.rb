@@ -13,14 +13,11 @@ module ToyRubot
     end
 
     def move
-      case @facing
-      when :north then @position[:y] += 1
-      when :east then @position[:x] += 1
-      when :south then @position[:y] -= 1
-      when :west then @position[:x] -= 1
-      end
+      @position = calculate_next_position(@position)
+    end
 
-      @position
+    def next_position
+      calculate_next_position(@position)
     end
 
     def turn(direction)
@@ -37,6 +34,21 @@ module ToyRubot
       end
 
       @facing
+    end
+
+    private # ---------------------------------------------------- // private
+
+    def calculate_next_position(current_position)
+      next_position = current_position.dup
+
+      case @facing
+      when :north then next_position[:y] += 1
+      when :east then next_position[:x] += 1
+      when :south then next_position[:y] -= 1
+      when :west then next_position[:x] -= 1
+      end
+
+      next_position
     end
   end
 end

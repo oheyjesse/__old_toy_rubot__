@@ -31,13 +31,13 @@ RSpec.describe ToyRubot::Robot do
     end
   end
 
-  describe 'next_move' do
+  describe 'next_position' do
     it 'can return it\'s next move' do
-      expect(robot.next_move).to eq(x: 0, y: 1)
+      expect(robot.next_position).to eq(x: 0, y: 1)
     end
 
     it 'returns it\'s next move without moving' do
-      expect(robot.next_move).to eq(x: 0, y: 1)
+      expect(robot.next_position).to eq(x: 0, y: 1)
       expect(robot.position).to eq(x: 0, y: 0)
     end
   end
