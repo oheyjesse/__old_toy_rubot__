@@ -12,6 +12,7 @@ module ToyRubot
       @table = Table.new(args)
     end
 
+    # args: {name: 'Robot Name'} (optional)
     def create_robot(x:, y:, facing:, **args)
       raise 'table must be created before robot' unless @table
       raise 'robot not in bounds of table' unless @table.in_bounds?(x: x, y: y)
