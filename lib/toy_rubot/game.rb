@@ -15,10 +15,6 @@ module ToyRubot
                end
     end
 
-    def update_table_size(size)
-      @table.set_size(size)
-    end
-
     def create_robot(x:, y:, facing:, **args)
       raise 'table must be created before robot' unless @table
       raise 'robot not within bounds of table' unless @table.in_bounds?(x: x, y: y)

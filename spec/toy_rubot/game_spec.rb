@@ -22,7 +22,7 @@ RSpec.describe ToyRubot::Game do
 
     it 'can update the table\'s size' do
       game.create_table(x: 2, y: 2)
-      game.update_table_size(x: 10, y: 10)
+      game.table.set_size(x: 10, y: 10)
       expect(game.table.size).to eq(x: 10, y: 10)
     end
   end
