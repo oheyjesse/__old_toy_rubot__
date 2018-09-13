@@ -19,7 +19,10 @@ module ToyRubot
       @table.set_size(size)
     end
 
-    def place_robot(**args)
+    def create_robot(**args)
+      raise 'table must be created before robot' unless @table
+      raise 'robot not within bounds of table' unless @table.in_bounds?(args)
+
       @robot = Robot.new(args)
     end
 
