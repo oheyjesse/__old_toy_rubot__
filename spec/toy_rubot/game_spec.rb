@@ -89,13 +89,31 @@ RSpec.describe ToyRubot::Game do
     it 'can get and pass the next robot move if valid' do
       game.create_table
       game.create_robot(x: 2, y: 2, facing: :north)
-      expect(game.check_valid(game.robot.next_move)).to be(true)
+      expect(game.check_valid(game.robot.next_position)).to be(true)
     end
 
-    it 'can get and pass the next robot move if valid' do
+    it 'returns false if north on north edge' do
       game.create_table
       game.create_robot(x: 4, y: 4, facing: :north)
-      expect(game.check_valid(game.robot.next_move)).to be(false)
+      expect(game.check_valid(game.robot.next_position)).to be(false)
+    end
+
+    it 'returns false if east on east edge' do
+      game.create_table
+      game.create_robot(x: 4, y: 4, facing: :east)
+      expect(game.check_valid(game.robot.next_position)).to be(false)
+    end
+
+    it 'returns false if south on south edge' do
+      game.create_table
+      game.create_robot(x: 0, y: 0, facing: :south)
+      expect(game.check_valid(game.robot.next_position)).to be(false)
+    end
+
+    it 'returns false if west on west edge' do
+      game.create_table
+      game.create_robot(x: 0, y: 0, facing: :west)
+      expect(game.check_valid(game.robot.next_position)).to be(false)
     end
   end
 end
