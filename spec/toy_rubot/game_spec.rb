@@ -65,11 +65,23 @@ RSpec.describe ToyRubot::Game do
     end
   end
 
-  describe 'robot movement' do
+  describe 'check_valid' do
     game.create_table
 
-    it 'can check if the intended direction is valid' do
+    it 'returns true if coordinates in range' do
       expect(game.check_valid(x: 3, y: 3)).to be(true)
+    end
+
+    it 'returns false if coordinates out of range' do
+      expect(game.check_valid(x: 15, y: 15)).to be(false)
+    end
+
+    it 'returns false if x coordinate out of range' do
+      expect(game.check_valid(x: 15, y: 3)).to be(false)
+    end
+
+    it 'returns false if y coordinate out of range' do
+      expect(game.check_valid(x: 3, y: 15)).to be(false)
     end
   end
 end
