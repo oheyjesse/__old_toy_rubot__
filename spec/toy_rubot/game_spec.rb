@@ -49,7 +49,7 @@ RSpec.describe ToyRubot::Game do
     it 'can update the robot\'s name' do
       game.create_table
       game.create_robot(x: 2, y: 2, facing: :north)
-      game.update_robot_name('Snoop Lion')
+      game.robot.name = 'Snoop Lion'
       expect(game.robot.name).to eq('Snoop Lion')
     end
 
